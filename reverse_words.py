@@ -43,16 +43,16 @@ def solve(input_path, output_path):
 def main():
     # solve for small input
     input_path = os.path.join(os.getcwd(),
-        "reverse_words_files" + os.sep + "b-small-practice.in")
+        "reverse_words_files" + os.sep + "small.in")
     output_path = os.path.join(os.getcwd(),
-        "reverse_words_files" + os.sep + "b-small-practice.out")
+        "reverse_words_files" + os.sep + "small.out")
     solve(input_path, output_path)
 
     # solve for large input
     input_path = os.path.join(os.getcwd(),
-        "reverse_words_files" + os.sep + "b-large-practice.in")
+        "reverse_words_files" + os.sep + "large.in")
     output_path = os.path.join(os.getcwd(),
-        "reverse_words_files" + os.sep + "b-large-practice.out")
+        "reverse_words_files" + os.sep + "large.out")
     solve(input_path, output_path)
 
 if __name__ == '__main__':

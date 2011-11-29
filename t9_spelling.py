@@ -31,6 +31,7 @@ def solve(input_path, output_path):
 
     for case in range(num_cases):
         # each case consists of one line: the message to t9-ify
+        #  strip the newline off of each line
         message = input.readline()[:-1]
         # iterate over characters and replace each with the
         #  correct T9 representation
@@ -61,16 +62,16 @@ def solve(input_path, output_path):
 def main():
     # solve for small input
     input_path = os.path.join(os.getcwd(),
-        "t9_spelling_files" + os.sep + "c-small-practice.in")
+        "t9_spelling_files" + os.sep + "small.in")
     output_path = os.path.join(os.getcwd(),
-        "t9_spelling_files" + os.sep + "c-small-practice.out")
+        "t9_spelling_files" + os.sep + "small.out")
     solve(input_path, output_path)
 
     # solve for large input
     input_path = os.path.join(os.getcwd(),
-        "t9_spelling_files" + os.sep + "c-large-practice.in")
+        "t9_spelling_files" + os.sep + "large.in")
     output_path = os.path.join(os.getcwd(),
-        "t9_spelling_files" + os.sep + "c-large-practice.out")
+        "t9_spelling_files" + os.sep + "large.out")
     solve(input_path, output_path)
 
 if __name__ == '__main__':

@@ -59,16 +59,16 @@ def solve(input_path, output_path):
 def main():
     # solve for small input
     input_path = os.path.join(os.getcwd(),
-        "store_credit_files" + os.sep + "a-small-practice.in")
+        "store_credit_files" + os.sep + "small.in")
     output_path = os.path.join(os.getcwd(),
-        "store_credit_files" + os.sep + "a-small-practice.out")
+        "store_credit_files" + os.sep + "small.out")
     solve(input_path, output_path)
 
     # solve for large input
     input_path = os.path.join(os.getcwd(),
-        "store_credit_files" + os.sep + "a-large-practice.in")
+        "store_credit_files" + os.sep + "large.in")
     output_path = os.path.join(os.getcwd(),
-        "store_credit_files" + os.sep + "a-large-practice.out")
+        "store_credit_files" + os.sep + "large.out")
     solve(input_path, output_path)
 
 if __name__ == '__main__':
