@@ -7,15 +7,12 @@
 # Author:      aaron gray
 #
 # Created:     28Nov2011
-# Copyright:   (c) GrayA 2011
+# Copyright:   (c) aaron gray 2011
 #-------------------------------------------------------------------------------
 
 import os
 
-def main():
-    # open the input file
-    input_path = os.path.join(os.getcwd(),
-        "reverse_words_files" + os.sep + "b-large-practice.in")
+def solve(input_path, output_path):
     input = open(input_path, 'r')
 
     # the first line in the input file is the number of cases
@@ -38,12 +35,25 @@ def main():
     input.close()
 
     # create the output file
-    output_path = os.path.join(os.getcwd(),
-        "reverse_words_files" + os.sep + "b-large-practice.out")
     output = open(output_path, 'w')
     # write the answers to the file, one answer per line
     output.write("\n".join(answers))
     output.close()
+
+def main():
+    # solve for small input
+    input_path = os.path.join(os.getcwd(),
+        "reverse_words_files" + os.sep + "b-small-practice.in")
+    output_path = os.path.join(os.getcwd(),
+        "reverse_words_files" + os.sep + "b-small-practice.out")
+    solve(input_path, output_path)
+
+    # solve for large input
+    input_path = os.path.join(os.getcwd(),
+        "reverse_words_files" + os.sep + "b-large-practice.in")
+    output_path = os.path.join(os.getcwd(),
+        "reverse_words_files" + os.sep + "b-large-practice.out")
+    solve(input_path, output_path)
 
 if __name__ == '__main__':
     main()

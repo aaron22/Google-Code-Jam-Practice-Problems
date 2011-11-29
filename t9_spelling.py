@@ -7,7 +7,7 @@
 # Author:      aaron gray
 #
 # Created:     28Nov2011
-# Copyright:   (c) GrayA 2011
+# Copyright:   (c) aaron gray 2011
 #-------------------------------------------------------------------------------
 
 import os
@@ -19,10 +19,7 @@ char_to_t9 = {'a': "2", 'b': "22", 'c': "222", 'd': "3", 'e': "33", 'f': "333",
     't': "8", 'u': "88", 'v': "888", 'w': "9", 'x': "99", 'y': "999",
     'z': "9999", ' ': "0"}
 
-def main():
-    # open the input file
-    input_path = os.path.join(os.getcwd(),
-        "t9_spelling_files" + os.sep + "c-large-practice.in")
+def solve(input_path, output_path):
     input = open(input_path, 'r')
 
     # the first line in the input file is the number of cases
@@ -56,12 +53,25 @@ def main():
     input.close()
 
     # create the output file
-    output_path = os.path.join(os.getcwd(),
-        "t9_spelling_files" + os.sep + "c-large-practice.out")
     output = open(output_path, 'w')
     # write the answers to the file, one answer per line
     output.write("\n".join(answers))
     output.close()
+
+def main():
+    # solve for small input
+    input_path = os.path.join(os.getcwd(),
+        "t9_spelling_files" + os.sep + "c-small-practice.in")
+    output_path = os.path.join(os.getcwd(),
+        "t9_spelling_files" + os.sep + "c-small-practice.out")
+    solve(input_path, output_path)
+
+    # solve for large input
+    input_path = os.path.join(os.getcwd(),
+        "t9_spelling_files" + os.sep + "c-large-practice.in")
+    output_path = os.path.join(os.getcwd(),
+        "t9_spelling_files" + os.sep + "c-large-practice.out")
+    solve(input_path, output_path)
 
 if __name__ == '__main__':
     main()

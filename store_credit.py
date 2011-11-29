@@ -7,16 +7,13 @@
 # Author:      GrayA
 #
 # Created:     23/11/2011
-# Copyright:   (c) GrayA 2011
+# Copyright:   (c) aaron gray 2011
 #-------------------------------------------------------------------------------
 #!/usr/bin/env python
 
 import os
 
-def main():
-    # open the input file
-    input_path = os.path.join(os.getcwd(),
-        "store_credit_files" + os.sep + "a-large-practice.in")
+def solve(input_path, output_path):
     input = open(input_path, 'r')
 
     # the first line in the input file is the number of cases
@@ -54,12 +51,25 @@ def main():
     input.close()
 
     # create the output file
-    output_path = os.path.join(os.getcwd(),
-        "store_credit_files" + os.sep + "a-large-practice.out")
     output = open(output_path, 'w')
     # write the answers to the file, one answer per line
     output.write("\n".join(answers))
     output.close()
+
+def main():
+    # solve for small input
+    input_path = os.path.join(os.getcwd(),
+        "store_credit_files" + os.sep + "a-small-practice.in")
+    output_path = os.path.join(os.getcwd(),
+        "store_credit_files" + os.sep + "a-small-practice.out")
+    solve(input_path, output_path)
+
+    # solve for large input
+    input_path = os.path.join(os.getcwd(),
+        "store_credit_files" + os.sep + "a-large-practice.in")
+    output_path = os.path.join(os.getcwd(),
+        "store_credit_files" + os.sep + "a-large-practice.out")
+    solve(input_path, output_path)
 
 if __name__ == '__main__':
     main()
