@@ -62,16 +62,16 @@ def solve(input_path, output_path):
 def main():
     # solve for small input
     input_path = os.path.join(os.getcwd(),
-        "t9_spelling_files" + os.sep + "small.in")
+        "t9_spelling_files", "small.in")
     output_path = os.path.join(os.getcwd(),
-        "t9_spelling_files" + os.sep + "small.out")
+        "t9_spelling_files", "small.out")
     solve(input_path, output_path)
 
     # solve for large input
     input_path = os.path.join(os.getcwd(),
-        "t9_spelling_files" + os.sep + "large.in")
+        "t9_spelling_files", "large.in")
     output_path = os.path.join(os.getcwd(),
-        "t9_spelling_files" + os.sep + "large.out")
+        "t9_spelling_files", "large.out")
     solve(input_path, output_path)
 
 if __name__ == '__main__':
