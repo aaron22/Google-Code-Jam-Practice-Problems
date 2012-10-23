@@ -1,5 +1,4 @@
 #-------------------------------------------------------------------------------
-# Name:        t9_spelling.py
 # Purpose:     solution to Google CodeJam problem 'Rope Intranet':
 #              http://code.google.com/codejam/contest/619102/dashboard#s=p0
 #
@@ -14,8 +13,7 @@ def solve(input_file):
 	# the first line in the input file is the number of cases
     num_cases = int(input_file.readline())
 
-    # build up all answers in this list, then push the whole
-    #  list to the output file when we're done
+    # build up all answers in this list
     answers = []
 
     for case in range(num_cases):
@@ -62,14 +60,6 @@ def write_output(output_path, solution):
     output.close()
 
 def main():
-    # solve for test input
-    input_file = open(
-    	os.path.join(os.getcwd(), "rope_intranet", "test.in"), 'r');
-    solution = solve(input_file)
-    output_path = os.path.join(os.getcwd(),
-        "rope_intranet", "test.out")
-    write_output(output_path, solution)
-
     # solve for small input
     input_file = open(
     	os.path.join(os.getcwd(), "rope_intranet", "small.in"), 'r');
